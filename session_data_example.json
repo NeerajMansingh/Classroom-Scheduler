@@ -1,0 +1,127 @@
+{
+  "id": "Spring2025",
+  "name": "Spring Semester 2025",
+  "programs": [
+    {
+      "id": "B23",
+      "name": "BTech 2023 Batch",
+      "departments": [
+        {
+          "id": "CSE",
+          "name": "Computer Science and Engineering",
+          "classrooms": [
+            { "id": "CS101", "capacity": 60 },
+            { "id": "CS102", "capacity": 45 },
+            { "id": "CS103", "capacity": 30 }
+          ],
+          "instructors": [
+            { "id": "I001", "name": "Dr. Rajesh Kumar" },
+            { "id": "I002", "name": "Dr. Sunita Sharma" },
+            { "id": "I003", "name": "Prof. Anand Verma" }
+          ],
+          "students": [
+            { "id": "S001", "name": "Aarav Singh" },
+            { "id": "S002", "name": "Dia Patel" },
+            { "id": "S003", "name": "Kabir Mehra" },
+            { "id": "S004", "name": "Aisha Khan" }
+          ],
+          "courses": [
+            {
+              "id": "CS201",
+              "name": "Data Structures",
+              "credits": 4,
+              "studentIds": ["S001", "S002", "S003", "S004"],
+              "instructorId": "I001"
+            },
+            {
+              "id": "CS202",
+              "name": "Algorithms",
+              "credits": 3,
+              "studentIds": ["S001", "S003"],
+              "instructorId": "I002"
+            },
+            {
+              "id": "CS203",
+              "name": "Database Systems",
+              "credits": 4,
+              "studentIds": ["S002", "S004"],
+              "instructorId": "I003"
+            }
+          ]
+        },
+        {
+          "id": "EE",
+          "name": "Electrical Engineering",
+          "classrooms": [
+            { "id": "EE101", "capacity": 50 },
+            { "id": "EE102", "capacity": 40 }
+          ],
+          "instructors": [
+            { "id": "I004", "name": "Dr. Priya Gupta" },
+            { "id": "I005", "name": "Prof. Vikram Malhotra" }
+          ],
+          "students": [
+            { "id": "S005", "name": "Nikhil Joshi" },
+            { "id": "S006", "name": "Riya Kapoor" },
+            { "id": "S007", "name": "Arjun Reddy" }
+          ],
+          "courses": [
+            {
+              "id": "EE201",
+              "name": "Circuit Theory",
+              "credits": 4,
+              "studentIds": ["S005", "S006", "S007"],
+              "instructorId": "I004"
+            },
+            {
+              "id": "EE202",
+              "name": "Digital Electronics",
+              "credits": 3,
+              "studentIds": ["S005", "S007"],
+              "instructorId": "I005"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M24",
+      "name": "MTech 2024 Batch",
+      "departments": [
+        {
+          "id": "CSE-PG",
+          "name": "Computer Science Engineering (PG)",
+          "classrooms": [
+            { "id": "PG101", "capacity": 30 },
+            { "id": "PG102", "capacity": 25 }
+          ],
+          "instructors": [
+            { "id": "I006", "name": "Dr. Smita Jain" },
+            { "id": "I007", "name": "Prof. Rohit Srinivasan" }
+          ],
+          "students": [
+            { "id": "S008", "name": "Ishaan Mehta" },
+            { "id": "S009", "name": "Neha Sharma" },
+            { "id": "S010", "name": "Rohan Das" }
+          ],
+          "courses": [
+            {
+              "id": "CS501",
+              "name": "Advanced Machine Learning",
+              "credits": 4,
+              "studentIds": ["S008", "S009", "S010"],
+              "instructorId": "I006"
+            },
+            {
+              "id": "CS502",
+              "name": "Advanced Algorithms",
+              "credits": 4,
+              "studentIds": ["S008", "S010"],
+              "instructorId": "I007"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
