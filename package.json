@@ -1,0 +1,17 @@
+{
+  "name": "classroom-planner",
+  "version": "1.0.0",
+  "description": "A classroom scheduling and planning web application.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "open": "^10.1.1"
+  }
+}

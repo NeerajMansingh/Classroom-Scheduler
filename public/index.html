@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classroom Planner</title>
+    
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fas fa-university"></i>
+          <h1>Classroom Planner</h1>
+        </div>
+        <div class="nav-items">
+          <div class="nav-item active" data-section="upload-section">
+            <i class="fas fa-file-upload"></i>
+            <span>Import Data</span>
+          </div>
+          <div class="nav-item" data-section="session-section" disabled>
+            <i class="fas fa-info-circle"></i>
+            <span>Session Info</span>
+          </div>
+          <div class="nav-item" data-section="scheduling-section" disabled>
+            <i class="fas fa-calendar-alt"></i>
+            <span>Schedule Courses</span>
+          </div>
+          <div class="nav-item" data-section="classroom-section" disabled>
+            <i class="fas fa-chalkboard"></i>
+            <span>Assign Classrooms</span>
+          </div>
+          <div class="nav-item" data-section="result-section" disabled>
+            <i class="fas fa-table"></i>
+            <span>View Timetable</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div id="status-message" style="display: none"></div>
+
+        <!-- Upload Section -->
+        <section id="upload-section">
+          <div class="section-header">
+            <h2><i class="fas fa-file-upload"></i> Import Session Data</h2>
+          </div>
+          <div class="section-content">
+            <div class="file-upload" id="drop-area">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <h3>Drag & drop your JSON file here</h3>
+              <p>or</p>
+              <button id="browse-files">
+                <i class="fas fa-folder-open"></i> Browse Files
+              </button>
+              <input type="file" id="json-file" accept=".json" />
+            </div>
+            <div id="json-preview-container" style="display: none">
+              <h3>JSON Preview</h3>
+              <div id="json-preview"></div>
+              <button
+                id="load-json"
+                class="btn-success"
+                style="margin-top: 15px"
+              >
+                <i class="fas fa-check-circle"></i> Load Data
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Session Section -->
+        <section id="session-section" class="hidden">
+          <div class="section-header">
+            <h2><i class="fas fa-info-circle"></i> Session Information</h2>
+            <button id="create-session">
+              <i class="fas fa-play"></i> Create Session
+            </button>
+          </div>
+          <div class="section-content">
+            <div id="session-info"></div>
+          </div>
+        </section>
+
+        <!-- Scheduling Section -->
+        <section id="scheduling-section" class="hidden">
+          <div class="section-header">
+            <h2><i class="fas fa-calendar-alt"></i> Schedule Courses</h2>
+          </div>
+          <div class="section-content">
+            <div class="layout">
+              <div class="course-list-container">
+                <h3>Available Courses</h3>
+                <div id="available-courses"></div>
+              </div>
+              <div class="timetable-container">
+                <table id="timetable">
+                  <thead>
+                    <tr>
+                      <th>Time</th>
+                      <th>Monday</th>
+                      <th>Tuesday</th>
+                      <th>Wednesday</th>
+                      <th>Thursday</th>
+                      <th>Friday</th>
+                    </tr>
+                  </thead>
+                  <tbody id="timetable-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Classroom Assignment Section -->
+        <section id="classroom-section" class="hidden">
+          <div class="section-header">
+            <h2><i class="fas fa-chalkboard"></i> Assign Classrooms</h2>
+          </div>
+          <div class="section-content">
+            <div id="scheduled-courses"></div>
+          </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="result-section" class="hidden">
+          <div class="section-header">
+            <h2><i class="fas fa-table"></i> Complete Timetable</h2>
+            <div>
+              <button id="generate-timetable" class="mr-2">
+                <i class="fas fa-sync-alt"></i> Generate Timetable
+              </button>
+              <button id="download-timetable" class="btn-secondary" disabled>
+                <i class="fas fa-download"></i> Download JSON
+              </button>
+            </div>
+          </div>
+          <div class="section-content">
+            <div id="final-timetable"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- JavaScript entry point -->
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
