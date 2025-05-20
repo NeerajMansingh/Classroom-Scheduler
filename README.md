@@ -1,9 +1,6 @@
-You're right — the formatting (especially the directory tree and code blocks) needs Markdown syntax to be preserved properly. Here's your cleaned-up and properly formatted `README.md` version:
-
----
-
-```markdown
 # Classroom Scheduler App
+
+
 
 The **Classroom Scheduler App** is a web-based tool for universities or institutions to manage and visualize the scheduling of courses, instructors, students, and classrooms in an interactive way.
 
@@ -28,7 +25,9 @@ It allows users to:
 
 ##  Directory Structure
 
-```
+
+```markdown
+
 
 Classroom-Scheduler/
 ├── public/                  # Frontend assets
@@ -128,6 +127,8 @@ http://localhost:3000
 ---
 
 ##  Sample `session.json`
+
+* An example has been given in sessions_data_example.json which is in this repository contents.
 
 ```json
 {
